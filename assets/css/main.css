@@ -3852,11 +3852,11 @@ input, select, textarea {
 				}
 
 				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
+					box-shadow: inset 0 -1px 0 0 #2c635b, 0 1px 0 0 #2c635b;
 				}
 
 				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
+					box-shadow: inset 0 -1px 0 0 #2c635b, 0 1px 0 0 #2c635b;
 				}
 
 			.wrapper.spotlight.style4 {
@@ -4154,4 +4154,5 @@ input, select, textarea {
 		}
 
 	}
+
 
