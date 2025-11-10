@@ -100,7 +100,7 @@ input, select, textarea {
 
 	body {
 		background-color: #0e3d3e;
-		background-image: linear-gradient(to top, rgba(15, 44, 54, 0.8), rgba(15, 44, 54, 0.8)), url("../../images/3.jpg");
+		background-image: linear-gradient(to top, rgba(15, 44, 54, 0.8), rgba(15, 44, 54, 0.8)), url("/images/3.jpg");
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -4166,5 +4166,6 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		}
 
 	}
+
 
 
