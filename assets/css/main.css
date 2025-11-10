@@ -210,29 +210,37 @@ input, select, textarea {
 				font-weight: 900;
 			}
 
-			a.special:not(.button):before {
+			a.special:not(.button):after {
 				-moz-transition: background-color 0.2s ease-in-out;
 				-webkit-transition: background-color 0.2s ease-in-out;
 				-ms-transition: background-color 0.2s ease-in-out;
 				transition: background-color 0.2s ease-in-out;
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
-				content: '\f105';
+				content: '\f104';
 				display: inline-block;
 				font-size: 1.25em;
 				height: 2em;
 				line-height: 1.75em;
-				margin-right: 0.85em;
+font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصدارك */
+    font-weight: 900; /* مهم لأيقونات Solid */
+    -moz-osx-font-smoothing: grayscale; /* لتحسين عرض الخط */
+    -webkit-font-smoothing: antialiased; /* لتحسين عرض الخط */
+				margin-left: 0.85em;
+                                margin-right: 0;
 				text-align: center;
 				text-indent: 0.15em;
 				vertical-align: middle;
 				width: 2em;
 			}
 
-			a.special:not(.button):hover:before {
-				background-color: rgba(255, 255, 255, 0.025);
+			a.special:not(.button):before {
+				content: none; 
+                                margin-right: 0;
 			}
-
+                         a.special:not(.button):hover:after {
+                           background-color: rgba(255, 255, 255, 0.025);
+                           }
 			a.special:not(.button):active:before {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
@@ -2455,8 +2463,9 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
+			margin: 0 auto 3em auto;
+			width: 80%;
+                        width: 100%;
 		}
 
 			.image.main img {
@@ -3019,10 +3028,10 @@ input, select, textarea {
 				border-radius: 5px 5px 0 0;
 				display: block;
 				margin-bottom: 1.75em;
-				margin-left: -1.75em;
+				margin: 0 auto 1.75em auto;
 				margin-top: -1.75em;
 				position: relative;
-				width: calc(100% + 3.5em);
+				width: 100%;
 			}
 
 				.features article .image img {
@@ -4033,7 +4042,10 @@ input, select, textarea {
 			margin: 0 3em 0 0;
 			width: calc(50% - 1.5em);
 		}
-
+/* فرض هامش خارجي على يمين أيقونة X لتبتعد عن الأيقونة التالية */
+.fa-x-twitter {
+    margin-left: 0.75em !important; 
+}
 		#footer .inner .contact {
 			width: calc(50% - 1.5em);
 		}
@@ -4154,3 +4166,5 @@ input, select, textarea {
 		}
 
 	}
+
+
