@@ -100,7 +100,7 @@ input, select, textarea {
 
 	body {
 		background-color: #0e3d3e;
-		background-image: linear-gradient(to top, rgba(15, 44, 54, 0.2), rgba(15, 44, 54, 0.2)), url("../../images/3.jpg");
+		background-image:linear-gradient(to top, rgba(15, 44, 54, 0.2), rgba(15, 44, 54, 0.2)), url("../../images/3.jpg");
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -197,7 +197,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			a.special:not(.button):before {
+			a.special:not(.button):after {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				display: inline-block;
@@ -217,30 +217,23 @@ input, select, textarea {
 				transition: background-color 0.2s ease-in-out;
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
-				content: '\f104';
+				content: '\f105';
 				display: inline-block;
 				font-size: 1.25em;
 				height: 2em;
 				line-height: 1.75em;
-font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصدارك */
-    font-weight: 900; /* مهم لأيقونات Solid */
-    -moz-osx-font-smoothing: grayscale; /* لتحسين عرض الخط */
-    -webkit-font-smoothing: antialiased; /* لتحسين عرض الخط */
 				margin-left: 0.85em;
-                                margin-right: 0;
+                                margin-right: 0.85em;
 				text-align: center;
 				text-indent: 0.15em;
 				vertical-align: middle;
 				width: 2em;
 			}
 
-			a.special:not(.button):before {
-				content: none; 
-                                margin-right: 0;
+			a.special:not(.button):hover:before {
+				background-color: rgba(255, 255, 255, 0.025);
 			}
-                         a.special:not(.button):hover:after {
-                           background-color: rgba(255, 255, 255, 0.025);
-                           }
+
 			a.special:not(.button):active:before {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
@@ -2173,7 +2166,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		}
 
 	label {
-		color: #ffffff;
+		color: #1E3A36;
 		display: block;
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.8em;
@@ -2196,7 +2189,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		background: rgba(255, 255, 255, 0.025);
 		border-radius: 5px;
 		border: none;
-		border: solid 2px rgba(255, 255, 255, 0.125);
+		border: solid 2px rgba(30, 58, 54, 0.5);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2220,12 +2213,12 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #5b6ba6;
+			border-color: #1E3A36;
 		}
 
 	select {
-		background-image: url("image/2.jpg");
-		background-size: cover;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.125)' /%3E%3C/svg%3E");
+		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
 		height: 2.75em;
@@ -2234,8 +2227,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 	}
 
 		select option {
-			color: #ffffff;
-			background: #0e3d3e;
+			color: #1E3A36;
+			background: #2e3141;
 		}
 
 		select:focus::-ms-value {
@@ -2274,7 +2267,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #ffffff;
+			color: #1E3A36;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2303,9 +2296,9 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: rgba(255, 255, 255, 0.025);
+				background: rgba(30, 58, 54, 0.5);
 				border-radius: 5px;
-				border: solid 2px rgba(255, 255, 255, 0.125);
+				border: solid 2px rgba(30, 58, 54, 0.5);
 				content: '';
 				display: inline-block;
 				font-size: 0.8em;
@@ -2321,14 +2314,14 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #ffffff;
-			border-color: #ffffff;
+			border-color: 1E3A36;
 			content: '\f00c';
-			color: #0e3d3e;
+			color: #1E3A36;
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #0e3d3e;
+			border-color: #1E3A36;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2340,7 +2333,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.35) !important;
+		color: rgba(30, 58, 54, 0.5) !important;
 		opacity: 1.0;
 	}
 
@@ -2463,9 +2456,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 
 		.image.main {
 			display: block;
-			margin: 0 auto 3em auto;
-			width: 80%;
-                        width: 100%;
+			margin: 0 0 3em 0;
+			width: 100%;
 		}
 
 			.image.main img {
@@ -2754,7 +2746,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 				}
 
 				ul.pagination li > .page.active {
-					background-color: #0e3d3e;
+					background-color: #4c5c96;
 				}
 
 			ul.pagination li:first-child {
@@ -2872,7 +2864,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: transparent;
+		background-color: #1E3A36;
 		border-radius: 5px;
 		border: 0;
 		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
@@ -2922,7 +2914,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #0e3d3e;
+			background-color: #4c5c96;
 			box-shadow: none;
 		}
 
@@ -2939,7 +2931,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #6d8b85;/* لون خلفية خدماتنا */
+				background-color: #45558d;
 			}
 
 			input[type="submit"].primary.icon:before,
@@ -2947,7 +2939,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			input[type="button"].primary.icon:before,
 			button.primary.icon:before,
 			.button.primary.icon:before {
-				color: #1d7b7e;
+				color: #7985b0;
 			}
 
 		input[type="submit"].fit,
@@ -3014,7 +3006,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 
 		.features article {
 			padding: 1.75em 1.75em 0.1em 1.75em ;
-			background-color: #53776b;
+			background-color: #353849;
 			border-radius: 5px;
 			margin: 1.5em 3em 1.5em 0;
 			width: calc(50% - 1.5em);
@@ -3028,10 +3020,10 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 				border-radius: 5px 5px 0 0;
 				display: block;
 				margin-bottom: 1.75em;
-				margin: 0 auto 1.75em auto;
+				margin-left: -1.75em;
 				margin-top: -1.75em;
 				position: relative;
-				width: 100%;
+				width: calc(100% + 3.5em);
 			}
 
 				.features article .image img {
@@ -3267,7 +3259,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		-ms-user-select: none;
 		user-select: none;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		background: rgba(78, 114, 98, 0.8);
+		background: rgba(46, 49, 65, 0.8);
 		cursor: default;
 		height: 100%;
 		left: 0;
@@ -3290,7 +3282,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 			transition: opacity 0.35s ease, transform 0.35s ease;
 			-webkit-overflow-scrolling: touch;
-			background: #0e3d3e;
+			background: #4c5c96;
 			border-radius: 5px;
 			display: block;
 			max-width: 100%;
@@ -3346,7 +3338,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 				}
 
 					#menu .links li a:hover {
-						background: #6d8b85;
+						background: #45558d;
 					}
 
 		@media screen and (max-width: 736px) {
@@ -3440,8 +3432,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			opacity: 1;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
+			margin-bottom: 0em;
+			padding-bottom: 0em;
 		}
 
 		#banner p {
@@ -3474,8 +3466,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #0e3d3e;
-				background-image: linear-gradient(to top, rgba(78, 114, 98, 0.8), rgba(78, 114, 98, 0.8)), url("../../images/bg.jpg");
+				background-color: #2e3141;
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 				background-size: auto,
  cover;
 				background-position: center,
@@ -3586,8 +3578,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
-			background-color: #0e3d3e;
-			background-image: linear-gradient(to top, rgba(78, 114, 98, 0.8), rgba(78, 114, 98, 0.8)), url("../../images/bg.jpg");
+			background-color: #2e3141;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -3634,7 +3626,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 	}
 
 	.wrapper {
-		background-color: #0e3d3e;
+		background-color: #2e3141;
 		margin: 6.5em 0;
 		position: relative;
 	}
@@ -3644,11 +3636,11 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		}
 
 		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
 		}
 
 		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3696,7 +3688,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		}
 
 		.wrapper.style2 {
-			background-color: #53776b;
+			background-color: #353849;
 		}
 
 			.wrapper.style2:before, .wrapper.style2:after {
@@ -3704,15 +3696,15 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
 			}
 
 		.wrapper.style3 {
-			background-color: #53776b;
+			background-color: #3d4051;
 		}
 
 			.wrapper.style3:before, .wrapper.style3:after {
@@ -3720,15 +3712,15 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 			.wrapper.style3:before {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
 			}
 
 			.wrapper.style3:after {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
 			}
 
 		.wrapper.style4 {
-			background-color: #53776b;
+			background-color: #454858;
 		}
 
 			.wrapper.style4:before, .wrapper.style4:after {
@@ -3736,15 +3728,15 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 			.wrapper.style4:before {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #454858, 0 1px 0 0 #454858;
 			}
 
 			.wrapper.style4:after {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #454858, 0 1px 0 0 #454858;
 			}
 
 		.wrapper.style5 {
-			background-color: #53776b;
+			background-color: #4d5060;
 		}
 
 			.wrapper.style5:before, .wrapper.style5:after {
@@ -3752,11 +3744,11 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 			.wrapper.style5:before {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #4d5060, 0 1px 0 0 #4d5060;
 			}
 
 			.wrapper.style5:after {
-				box-shadow: inset 0 -1px 0 0 #53776b, 0 1px 0 0 #53776b;
+				box-shadow: inset 0 -1px 0 0 #4d5060, 0 1px 0 0 #4d5060;
 			}
 
 		.wrapper.style6 {
@@ -3776,19 +3768,19 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 		.wrapper.spotlight {
-			background-color: #0e3d3e;
+			background-color: #4c5c96;
 		}
 
 			.wrapper.spotlight:before, .wrapper.spotlight:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%230e3d3e%3B' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%234c5c96%3B' /%3E%3C/svg%3E");
 			}
 
 			.wrapper.spotlight:before {
-				box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
 			}
 
 			.wrapper.spotlight:after {
-				box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
 			}
 
 			.wrapper.spotlight .inner {
@@ -3837,39 +3829,39 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			}
 
 			.wrapper.spotlight.style2 {
-				background-color: #186365;
+				background-color: #45558d;
 			}
 
 				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23186365%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #186365, 0 1px 0 0 #186365;
+					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
 				}
 
 				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #186365, 0 1px 0 0 #186365;
+					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
 				}
 
 			.wrapper.spotlight.style3 {
-				background-color: #1d7b7e;
+				background-color: #3f4e85;
 			}
 
 				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%231d7b7e%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #1d7b7e, 0 1px 0 0 #1d7b7e;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #1d7b7e, 0 1px 0 0 #1d7b7e;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 			.wrapper.spotlight.style4 {
-				background-color: #1d7b7e;
+				background-color: #39477c;
 			}
 
 				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
@@ -3877,43 +3869,43 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 				}
 
 				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #1d7b7e, 0 1px 0 0 #1d7b7e;
+					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
 				}
 
 				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #1d7b7e, 0 1px 0 0 #1d7b7e;
+					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
 				}
 
 			.wrapper.spotlight.style5 {
-				background-color: #186365;
+				background-color: #324072;
 			}
 
 				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%231d7b7e%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #186365, 0 1px 0 0 #186365;
+					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
 				}
 
 				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #186365, 0 1px 0 0 #186365;
+					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
 				}
 
 			.wrapper.spotlight.style6 {
-				background-color: #0e3d3e;
+				background-color: #2d3a69;
 			}
 
 				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%231d7b7e%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232d3a69%3B' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style6:before {
-					box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
 				}
 
 				.wrapper.spotlight.style6:after {
-					box-shadow: inset 0 -1px 0 0 #0e3d3e, 0 1px 0 0 #0e3d3e;
+					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
 				}
 
 		@media screen and (max-width: 980px) {
@@ -4042,10 +4034,7 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 			margin: 0 3em 0 0;
 			width: calc(50% - 1.5em);
 		}
-/* فرض هامش خارجي على يمين أيقونة X لتبتعد عن الأيقونة التالية */
-.fa-x-twitter {
-    margin-left: 0.75em !important; 
-}
+
 		#footer .inner .contact {
 			width: calc(50% - 1.5em);
 		}
@@ -4082,8 +4071,8 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			background-color: #0e3d3e;
-			background-image: linear-gradient(to top, rgba(78, 114, 98, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-color: #2e3141;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -4166,8 +4155,3 @@ font-family: 'Font Awesome 5 Free'; /* أو 'Font Awesome 5 Solid' حسب إصد
 		}
 
 	}
-
-
-
-
-
