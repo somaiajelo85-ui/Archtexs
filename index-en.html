@@ -915,7 +915,7 @@
       
       <div class="modal-body">
         <form id="contactForm" action="https://formspree.io/f/mkglbpll" method="POST">
-          
+          <input type="hidden" name="_next" value="https://archtexs.com/thanks-en.html">
           <div class="mb-3">
             <label for="senderName" class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="senderName" name="name" required>
@@ -967,7 +967,7 @@
       }).then(response => {
         if (response.ok) {
           // 2. ✅ هنا السر: التوجيه الإجباري لصفحة الشكر
-          window.location.href = "thanks.html"; 
+          window.location.href = "thanks-en.html"; 
         } else {
           // في حال حدوث خطأ
           response.json().then(data => {
