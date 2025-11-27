@@ -908,7 +908,7 @@
       </div>
       
       <div class="modal-body">
-  <form action="https://formspree.io/f/mkglbpll" method="POST">
+  <form id="contactForm" action="https://formspree.io/f/mkglbpll" method="POST">
       <input type="hidden" name="_next" value="https://archtexs.com/thanks.html">
       <div class="mb-3">
         <label for="senderName" class="col-form-label">الاسم:</label>
@@ -934,6 +934,53 @@
     </div>
   </div>
 </div>
+  <script>
+    var form = document.getElementById("contactForm");
+    
+    async function handleSubmit(event) {
+      event.preventDefault(); // 1. يمنع الانتقال لصفحة Formspree البيضاء
+      
+      var status = document.createElement("div"); // (اختياري)
+      var data = new FormData(event.target);
+      
+      // تغيير نص الزر ليشعر المستخدم أن شيئاً يحدث
+      var btn = form.querySelector("button[type='submit']");
+      var originalText = btn.innerHTML;
+      btn.innerHTML = "جاري الإرسال...";
+      btn.disabled = true;
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // 2. ✅ هنا السر: التوجيه الإجباري لصفحة الشكر
+          window.location.href = "thanks.html"; 
+        } else {
+          // في حال حدوث خطأ
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert("حدث خطأ غير متوقع، حاول مرة أخرى.");
+            }
+            // إعادة الزر لحالته الطبيعية
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          })
+        }
+      }).catch(error => {
+        alert("تأكد من اتصالك بالإنترنت.");
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      });
+    }
+    
+    form.addEventListener("submit", handleSubmit);
+</script>
 </body>
 
 </html>
