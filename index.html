@@ -908,30 +908,28 @@
       </div>
       
       <div class="modal-body">
-        <form action="send_email.php" method="POST">
-          
-          <div class="mb-3">
-            <label for="senderName" class="col-form-label">الاسم:</label>
-            <input type="text" class="form-control" id="senderName" name="name" required>
-          </div>
-          
-          <div class="mb-3">
-            <label for="senderEmail" class="col-form-label">بريدك الإلكتروني:</label>
-            <input type="email" class="form-control" id="senderEmail" name="email" required>
-          </div>
-          
-          <div class="mb-3">
-            <label for="messageText" class="col-form-label">الرسالة:</label>
-            <textarea class="form-control" id="messageText" name="message" rows="4" required></textarea>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
-            <button type="submit" class="btn btn-primary" style="background-color: var(--archtexs-dark); border: none;">إرسال الرسالة</button>
-          </div>
-
-        </form>
+  <form action="send_email.php" method="POST">
+      
+      <div class="mb-3">
+        <label for="senderName" class="col-form-label">الاسم:</label>
+        <input type="text" class="form-control" id="senderName" name="name" required>
       </div>
+      
+      <div class="mb-3">
+        <label for="senderEmail" class="col-form-label">بريدك الإلكتروني:</label>
+        <input type="email" class="form-control" id="senderEmail" name="email" required>
+      </div>
+      
+      <div class="mb-3">
+        <label for="messageText" class="col-form-label">الرسالة:</label>
+        <textarea class="form-control" id="messageText" name="message" rows="4" required></textarea>
+      </div>
+
+      <div class="modal-footer" style="border-top: none; padding-bottom: 0;">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+      </div>
+      </form> </div>
       
     </div>
   </div>
