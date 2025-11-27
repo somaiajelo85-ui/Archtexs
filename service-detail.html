@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تفاصيل الخدمة - ARCHTEXS</title>
+  
+  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendors/hamburgers/hamburgers.min.css" rel="stylesheet">
+  <link href="vendors/loaders.css/loaders.min.css" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet" />
+  <link href="assets/css/user.min.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --archtexs-dark: #1E3A36;
+      --archtexs-gold: #C9A227;
+      --archtexs-light: #F4F6F5;
+      --archtexs-gray: #D9E3DF;
+      --archtexs-black: #0b1715;
+    }
+
+    * {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--archtexs-light);
+    }
+
+    .service-hero {
+      background: linear-gradient(135deg, var(--archtexs-dark) 0%, #2d5a55 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .service-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--archtexs-gold);
+      margin-bottom: 20px;
+    }
+
+    .service-hero p {
+      font-size: 1.3rem;
+      color: var(--archtexs-light);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    .service-content {
+      padding: 60px 0;
+    }
+
+    .service-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 40px;
+      white-space: pre-wrap;
+    }
+
+    .service-features {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      margin: 40px 0;
+      border-right: 5px solid var(--archtexs-gold);
+    }
+
+    .service-features h3 {
+      color: var(--archtexs-dark);
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+
+    .feature-item i {
+      color: var(--archtexs-gold);
+      font-size: 1.5rem;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .feature-item p {
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--archtexs-gold);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      color: var(--archtexs-dark);
+    }
+
+    .back-button i {
+      margin-left: 8px;
+    }
+
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      width: auto;
+    }
+
+    .nav-link {
+      color: var(--archtexs-dark) !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--archtexs-gold) !important;
+    }
+
+    footer {
+      background-color: var(--archtexs-dark);
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: var(--archtexs-gold);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-gold {
+      background-color: var(--archtexs-gold);
+      color: var(--archtexs-dark);
+      border: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--archtexs-dark);
+      color: var(--archtexs-gold);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="margin-left: 0;">
+        <img src="assets/img/logo.png" alt="ARCHTEXS Logo"style="height: 100px; width: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">الخدمات</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#team">الفريق</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">التواصل</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index-en.html" style="color: var(--archtexs-gold); font-weight: 700;">EN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Service Hero -->
+  <div class="service-hero" id="serviceHero">
+    <div class="container">
+      <a href="index.html#services" class="back-button">
+        <i class="fas fa-arrow-left"></i> العودة للخدمات
+      </a>
+      <h1 id="serviceName">اسم الخدمة</h1>
+      <p id="serviceTagline">وصف قصير للخدمة</p>
+    </div>
+  </div>
+
+  <!-- Service Content -->
+  <div class="container service-content">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <img id="serviceImage" src="assets/img/img_1.jpg" alt="صورة الخدمة" class="service-image">
+        
+        <div class="service-description" id="serviceDescription">
+          وصف تفصيلي للخدمة سيظهر هنا
+        </div>
+
+        <div class="service-features">
+          <h3>مميزات الخدمة</h3>
+          <div id="serviceFeatures"></div>
+        </div>
+
+        <div class="service-features" style="border-right-color: var(--archtexs-dark);">
+          <h3>عملية التنفيذ</h3>
+          <div id="serviceProcess"></div>
+        </div>
+
+        <div style="background: var(--archtexs-gold); color: white; padding: 40px; border-radius: 10px; text-align: center; margin-top: 40px;">
+          <h3 style="margin-bottom: 20px;">هل تريد معرفة المزيد؟</h3>
+          <p style="margin-bottom: 20px;">تواصل معنا الآن للحصول على استشارة مجانية</p>
+          <a href="index.html#contact" class="btn btn-light btn-lg">طلب استشارة مجانية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h5 class="footer-title">عن ARCHTEXS</h5>
+          <p>شركة متخصصة في التشطيبات والديكور والأعمال الكهربائية والنجارة والمنازل الذكية</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">الخدمات</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="service-detail.html?service=interior-design">الديكور والتصميم</a></li>
+            <li><a href="service-detail.html?service=plastering">أعمال التلييس</a></li>
+            <li><a href="service-detail.html?service=painting">الدهان</a></li>
+            <li><a href="service-detail.html?service=electrical">الكهرباء</a></li>
+            <li><a href="service-detail.html?service=renovation">ترميم المنازل</a></li>
+            <li><a href="service-detail.html?service=tiling">تركيب البلاط</a></li>
+            <li><a href="service-detail.html?service=vip">خدمة VIP</a></li>
+            <li><a href="service-detail.html?service=smart-homes">المنازل الذكية</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">تواصل معنا</h5>
+          <p>
+            <i class="fas fa-phone"></i> <a href="tel:+46720029120">+46 72 002 9120</a><br>
+            <i class="fas fa-envelope"></i> <a href="mailto:info@archtexs.com">info@archtexs.com</a><br>
+            <i class="fas fa-map-marker-alt"></i> سوريا – دمشق
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+      <div class="row text-center">
+        <div class="col-12">
+          <p style="margin: 0;">جميع الحقوق محفوظة © 2025 ARCHTEXS - من الفكرة حتى آخر لمسة</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+  <script>
+    // Service data
+    const services = {
+      'foundation': {
+        name: 'أعمال البنية والتأسيس',
+        tagline: 'أساس متين لمشروعك',
+        image: 'assets/img/img_1.jpg',
+        description: `نقدم خدمات متكاملة لأعمال البنية التحتية والتأسيس لضمان قوة ومتانة مشروعك. تشمل خدماتنا تأسيس الكهرباء والسباكة، العزل الحراري والمائي، وبناء الجدران الأساسية.`,
+        features: [
+          { icon: 'fas fa-bolt', text: 'تأسيس الكهرباء وتمديد الأسلاك' },
+          { icon: 'fas fa-faucet', text: 'تمديد السباكة والصرف الصحي' },
+          { icon: 'fas fa-water', text: 'العزل الحراري والمائي' },
+          { icon: 'fas fa-cube', text: 'بناء الجدران الداخلية (بلوك/جبسوم بورد)' },
+          { icon: 'fas fa-door-open', text: 'تركيب الشبابيك والأبواب الأساسية' }
+        ],
+        process: [
+          { icon: 'fas fa-drafting-compass', text: 'تخطيط وتصميم البنية التحتية' },
+          { icon: 'fas fa-tools', text: 'تنفيذ أعمال التأسيس' },
+          { icon: 'fas fa-check-double', text: 'فحص الجودة والتأكد من المعايير' },
+          { icon: 'fas fa-building', text: 'الانتهاء من الهيكل الأساسي' }
+        ]
+      },
+      'interior-finishing': {
+        name: 'التشطيبات الداخلية',
+        tagline: 'لمسة جمالية وفخامة لا مثيل لها',
+        image: 'assets/img/img_2.jpg',
+        description: `نحول مساحتك الداخلية إلى تحفة فنية من خلال خدمات التشطيبات الداخلية المتميزة. نستخدم أجود المواد والتقنيات الحديثة في الدهانات، الجبس، الأرضيات، والأسقف المستعارة.`,
+        features: [
+          { icon: 'fas fa-paint-roller', text: 'الدهانات بجميع أنواعها' },
+          { icon: 'fas fa-archway', text: 'الجبس والزخارف الجدارية' },
+          { icon: 'fas fa-scroll', text: 'تركيب ورق الحائط والديكورات' },
+          { icon: 'fas fa-border-all', text: 'أعمال الأرضيات (بلاط، سيراميك، بورسلان)' },
+          { icon: 'fas fa-tree', text: 'الباركيه والفينيل' },
+          { icon: 'fas fa-border-all', text: 'تركيب الأسقف المستعارة' }
+        ],
+        process: [
+          { icon: 'fas fa-palette', text: 'اختيار التصاميم والألوان' },
+          { icon: 'fas fa-brush', text: 'تطبيق الدهانات والجبس' },
+          { icon: 'fas fa-trowel', text: 'تركيب الأرضيات والأسقف' },
+          { icon: 'fas fa-star', text: 'التشطيب النهائي والتسليم' }
+        ]
+      },
+      'carpentry-blacksmithing': {
+        name: 'النجارة والحدادة والمطابخ العصرية',
+        tagline: 'أعمال نجارة وحدادة  وتنفيذ مطابخ فاخرة بمعايير دقيقة ولمسات عصرية ',
+        image: 'assets/img/img_3.jpg',
+        description: `نقدم حلولاً متكاملة للنجارة والحدادة، من الأبواب والخزائن إلى الدرابزين وحمايات النوافذ. نجمع بين الحرفية التقليدية والتصاميم العصرية لإنتاج قطع فريدة وعالية الجودة.`,
+        features: [
+          { icon: 'fas fa-door-closed', text: 'نجارة الأبواب الداخلية والخارجية' },
+          { icon: 'fas fa-kitchen-set', text: 'خزائن المطابخ والدواليب' },
+          { icon: 'fas fa-stairs', text: 'درابزين + حمايات نوافذ' },
+          { icon: 'fas fa-lock', text: 'أبواب حديد/ألمنيوم/خشب' }
+        ],
+        process: [
+          { icon: 'fas fa-ruler-combined', text: 'قياس وتصميم القطع' },
+          { icon: 'fas fa-hammer', text: 'تصنيع النجارة والحدادة' },
+          { icon: 'fas fa-screwdriver', text: 'تركيب وتثبيت القطع' },
+          { icon: 'fas fa-handshake', text: 'التسليم النهائي' }
+        ]
+      },
+      'modern-electrical': {
+        name: 'أعمال الكهرباء الحديثة',
+        tagline: 'أنظمة كهربائية ذكية وآمنة',
+        image: 'assets/img/img_4.jpg',
+        description: `تخصصنا في تركيب الأنظمة الكهربائية الحديثة التي تضمن الأمان والكفاءة. تشمل خدماتنا السويتشات، الإنارة المخفية، أنظمة المنازل الذكية، وكاميرات المراقبة.`,
+        features: [
+          { icon: 'fas fa-plug', text: 'السويتشات والمخارج' },
+          { icon: 'fas fa-lightbulb', text: 'الإنارة المخفية والديكورية' },
+          { icon: 'fas fa-house-signal', text: 'أنظمة المنازل الذكية (Smart Home)' },
+          { icon: 'fas fa-video', text: 'تركيب كاميرات المراقبة وإنذار الحريق' }
+        ],
+        process: [
+          { icon: 'fas fa-drafting-compass', text: 'تصميم الدارات الكهربائية' },
+          { icon: 'fas fa-tools', text: 'تركيب الأسلاك والمفاتيح' },
+          { icon: 'fas fa-check-double', text: 'اختبار شامل للنظام' },
+          { icon: 'fas fa-certificate', text: 'إصدار شهادة الفحص' }
+        ]
+      },
+      'final-plumbing': {
+        name: 'أعمال السباكة',
+        tagline: 'تركيبات صحية عالية الجودة',
+        image: 'assets/img/img_5.jpg',
+        description: `نضمن لك تركيبات سباكة نهائية عالية الجودة وعملية. تشمل خدماتنا تركيب الخلاطات والمغاسل، تجهيز الحمامات بالكامل، وتركيب سخانات الطاقة الكهربائية والشمسية.`,
+        features: [
+          { icon: 'fas fa-faucet-drip', text: 'تركيب خلاطات ومغاسل' },
+          { icon: 'fas fa-bath', text: 'تجهيز الحمامات مع الاكسسوارات' },
+          { icon: 'fas fa-solar-panel', text: 'سخانات الطاقة الكهربائية والطاقة الشمسية' }
+        ],
+        process: [
+          { icon: 'fas fa-ruler-combined', text: 'مرحلة التخطيط والتجهيز' },
+          { icon: 'fas fa-screwdriver', text: 'مرحلة التمديدات الأولية (السباكة المخفية)' },
+          { icon: 'fas fa-trowel', text: 'مرحلة التركيب النهائي' },
+          { icon: 'fas fa-check-circle', text: 'مرحلة الفحص والتسليم' }
+        ]
+      },
+      'exterior-finishing': {
+        name: 'التشطيبات الخارجية',
+        tagline: 'واجهة منزلك تعكس فخامته',
+        image: 'assets/img/img_6.jpg',
+        description: `نولي اهتماماً خاصاً للواجهات الخارجية التي تعطي الانطباع الأول عن منزلك. نقدم خدمات دهان الواجهات، تركيب الحجر والرخام، المظلات، وأرضيات الحدائق.`,
+        features: [
+          { icon: 'fas fa-house-chimney', text: 'دهان واجهات المنازل' },
+          { icon: 'fas fa-gem', text: 'الحجر والرخام الخارجي' },
+          { icon: 'fas fa-umbrella', text: 'تركيب المظلات والأحواش' },
+          { icon: 'fas fa-leaf', text: 'بلاط وأرضيات الحدائق' }
+        ],
+        process: [
+          { icon: 'fas fa-magnifying-glass', text: 'فحص دقيق للمنزل' },
+          { icon: 'fas fa-clipboard-list', text: 'إعداد خطة تشطيب شاملة' },
+          { icon: 'fas fa-wrench', text: 'تنفيذ جميع مراحل التشطيب .. تركيب الحجر الطبيعي والصناعي.. دهانات خارجية.. تركيب الديكور الخارجي' },
+          { icon: 'fas fa-handshake', text: 'تسليم المنزل جاهز للسكن' }
+        ]
+      },
+      'renovation-maintenance': {
+        name: 'ترميم وصيانة المنازل',
+        tagline: 'إعادة الحياة لمنزلك',
+        image: 'assets/img/before_after_renovation.jpg',
+        description: `خدمات متخصصة لترميم وصيانة المنازل، تشمل معالجة التشققات والرطوبة، تجديد الحمامات والمطابخ، وصيانة شاملة للكهرباء والسباكة والأسقف والجدران.`,
+        features: [
+          { icon: 'fas fa-screwdriver', text: 'معالجة التشققات والرطوبة' },
+          { icon: 'fas fa-kitchen-set', text: 'تجديد الحمامات والمطابخ' },
+          { icon: 'fas fa-screwdriver-wrench', text: 'صيانة كهرباء وسباكة' },
+          { icon: 'fas fa-trowel', text: 'ترميم الأسقف والجدران' }
+        ],
+        process: [
+          { icon: 'fas fa-comments', text: 'استشارة شاملة وتفصيلية' },
+          { icon: 'fas fa-pencil-ruler', text: 'تصميم مخصص حسب رغباتك' },
+          { icon: 'fas fa-eye', text: 'متابعة يومية للتنفيذ' },
+          { icon: 'fas fa-crown', text: 'تسليم فاخر مع ضمانات شاملة' }
+        ]
+      },
+  
+
+'vip': {
+        name: 'خدمة  VIP',
+        tagline: 'تجربة حصرية لإنجاز مشروعك بأعلى المعايير',
+        image: 'assets/img/img_10.jpg', 
+        description: `خدمة الـ VIP هي باقة متكاملة ومخصصة لعملائنا المميزين الذين يبحثون عن أعلى مستويات الجودة والاهتمام بالتفاصيل والسرعة في الإنجاز. تشمل هذه الخدمة إدارة مشروعك بالكامل من الألف إلى الياء، مع فريق متخصص تحت تصرفك.`,
+        features: [
+            { icon: 'fas fa-star', text: 'تصميم وعرض في الواقع الافتراضي (Virtual Reality)' },
+            { icon: 'fas fa-handshake', text: 'فريق عمل مخصص تحت الطلب' },
+            { icon: 'fas fa-gem', text: 'اختيار مواد وتشطيبات فاخرة وحصرية' },
+            { icon: 'fas fa-clock', text: 'جدول زمني مضغوط وسرعة في الإنجاز' },
+            { icon: 'fas fa-headset', text: 'دعم ومتابعة على مدار الساعة' }
+        ],
+        process: [
+            { icon: 'fas fa-user-tie', text: 'اجتماع استشاري خاص لتحديد المتطلبات' },
+            { icon: 'fas fa-palette', text: 'تصميم ثلاثي الأبعاد حصري ومفصل' },
+            { icon: 'fas fa-tasks', text: 'تنفيذ المشروع بإشراف هندسي مباشر' },
+            { icon: 'fas fa-key', text: 'تسليم المشروع جاهزاً بالكامل (Turnkey)' }
+        ]
+      }
+    };
+    // Get service from URL parameter
+    function getServiceFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const serviceName = params.get('service');
+      if (serviceName) {
+        try {
+          return decodeURIComponent(serviceName);
+        } catch (e) {
+          return serviceName;
+        }
+      }
+      return 'الديكور والتصميم الداخلي'; // Default service name
+    }
+
+    // Load service details
+    function loadService() {
+      const serviceName = getServiceFromURL();
+      // Find the service key by name
+      const serviceId = Object.keys(services).find(key => services[key].name === serviceName);
+      const service = services[serviceId];
+
+      if (service) {
+        document.getElementById('serviceName').textContent = service.name;
+        document.getElementById('serviceTagline').textContent = service.tagline;
+        document.getElementById('serviceImage').src = service.image;
+        document.getElementById('serviceDescription').textContent = service.description;
+
+        // Load features
+        const featuresContainer = document.getElementById('serviceFeatures');
+        featuresContainer.innerHTML = service.features.map(feature => `
+          <div class="feature-item">
+            <i class="${feature.icon}"></i>
+            <p>${feature.text}</p>
+          </div>
+        `).join('');
+
+        // Load process
+        const processContainer = document.getElementById('serviceProcess');
+        processContainer.innerHTML = service.process.map(step => `
+          <div class="feature-item">
+            <i class="${step.icon}"></i>
+            <p>${step.text}</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Load on page load
+    window.addEventListener('load', loadService);
+  </script>
+</body>
+
+</html>

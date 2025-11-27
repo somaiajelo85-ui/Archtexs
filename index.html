@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===============================================-->
+  <!--    Document Title-->
+  <!-- ===============================================-->
+    <title>ARCHTEXS - التشطيبات والديكور</title>
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendors/hamburgers/hamburgers.min.css" rel="stylesheet">
+  <link href="vendors/loaders.css/loaders.min.css" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet" />
+  <link href="assets/css/user.min.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --archtexs-dark: #1E3A36;
+      --archtexs-gold: #C9A227;
+      --archtexs-light: #F4F6F5;
+      --archtexs-gray: #D9E3DF;
+      --archtexs-black: #0b1715;
+    }
+
+    title {
+      color: var(--archtexs-gold) !important;
+    }
+
+    * {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      color: var(--archtexs-dark);
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+
+    .btn-gold {
+      background-color: var(--archtexs-gold);
+      color: white;
+      border: 2px solid var(--archtexs-gold);
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: transparent;
+      color: var(--archtexs-gold);
+    }
+
+    .section-title {
+      color: var(--archtexs-dark);
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      background: transparent;
+      border-left: 4px solid var(--archtexs-gold);
+      padding: 2rem;
+      padding-right: 0;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(30, 58, 54, 0.15);
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-card h5 {
+      color: var(--archtexs-gold);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-slider {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .hero-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-slide-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 3rem;
+      text-align: right;
+    }
+
+    .hero-slide-content h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-slide-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slider-dot.active {
+      background: var(--archtexs-gold);
+      width: 30px;
+      border-radius: 6px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--archtexs-dark) 0%, var(--archtexs-black) 100%);
+      color: white;
+      padding: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: var(--archtexs-gold);
+      opacity: 0.05;
+      border-radius: 50%;
+      transform: translate(100px, -100px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: var(--archtexs-light);
+    }
+
+    .tagline {
+      color: var(--archtexs-gold);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 3rem;
+    }
+
+    .about-section {
+      background-color: var(--archtexs-light);
+      padding: 5rem 0;
+    }
+
+    .about-text {
+      color: var(--archtexs-dark);
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .vision-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      border-top: 4px solid var(--archtexs-gold);
+      margin-bottom: 2rem;
+    }
+
+    .vision-box h4 {
+      color: var(--archtexs-gold);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .services-section {
+      background: white;
+      padding: 5rem 0;
+    }
+
+    .service-icon {
+      color: var(--archtexs-gold);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      height: 300px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 58, 54, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-overlay-text {
+      color: white;
+      text-align: center;
+    }
+
+    .project-overlay-text h4 {
+      color: var(--archtexs-gold);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      background: var(--archtexs-dark);
+      color: white;
+      padding: 3rem 0;
+    }
+
+    .footer-title {
+      color: var(--archtexs-gold);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer a {
+      color: var(--archtexs-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: var(--archtexs-gold);
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--archtexs-gold);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--archtexs-light);
+      color: var(--archtexs-dark);
+      transform: translateY(-3px);
+    }
+
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--archtexs-dark) !important;
+      font-weight: 600;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--archtexs-gold) !important;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: 1rem;
+    }
+
+    .lang-switch a {
+      padding: 0.5rem 1rem;
+      background: var(--archtexs-gold);
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .lang-switch a:hover {
+      background: var(--archtexs-dark);
+    }
+
+    .lang-switch a.active {
+      background: var(--archtexs-dark);
+      color: var(--archtexs-gold);
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 2rem;
+      background: var(--archtexs-light);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member h5 {
+      color: var(--archtexs-dark);
+      font-weight: 700;
+      margin-top: 1rem;
+    }
+
+    .team-member p {
+      color: var(--archtexs-gold);
+      font-weight: 600;
+    }
+
+    .contact-info {
+      background: var(--archtexs-light);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info i {
+      color: var(--archtexs-gold);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info h5 {
+      color: var(--archtexs-dark);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      border: 4px solid var(--archtexs-light);
+      border-top: 4px solid var(--archtexs-gold);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- ===============================================-->
+  <!--    Navigation-->
+  <!-- ===============================================-->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#top" style="margin-left: 0;">
+        <img src="assets/img/logo.png" alt="ARCHTEXS Logo" style="height: 100px; width: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">أعمالنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">الخدمات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">الفريق</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">التواصل</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index-en.html" style="color: var(--archtexs-gold); font-weight: 700;">EN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===============================================-->
+  <!--    Main Content-->
+  <!-- ===============================================-->
+  <main class="main" id="top">
+    <!-- Hero Slider Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-slider">
+              <div class="hero-slide active">
+                <img src="assets/img/header_1.jpg" alt="مشروع 1">
+                <div class="hero-slide-content">
+                  
+                  <p>تصاميم حديثة وراقية</p>
+                </div>
+              </div>
+              <div class="hero-slide">
+                <img src="assets/img/header_2.png" alt="مشروع 2">
+                <div class="hero-slide-content">
+                  
+                  <p>جودة عالية والتزام بالتفاصيل</p>
+                </div>
+              </div>
+              <div class="hero-slide">
+                <img src="assets/img/header_3.jpg" alt="مشروع 3">
+                <div class="hero-slide-content">
+                 
+                  <p>حلول بيوت ذكية متكاملة</p>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <div class="slider-dot active" onclick="goToSlide(0)"></div>
+                <div class="slider-dot" onclick="goToSlide(1)"></div>
+                <div class="slider-dot" onclick="goToSlide(2)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-content">
+             
+              <div style="text-align: right;">
+                <h1 style="color: #C9A227; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 4rem; margin: 0;">آركتيكس</h1>
+              <p class="tagline">من الفكرة… حتى آخر لمسة</p>
+              </div>
+              <p>شركة متخصصة في التشطيبات والديكور والأعمال الكهربائية والنجارة والمنازل الذكية</p>
+              <p>نحول رؤيتك المعمارية إلى واقع متقن يجمع بين الجودة الهندسية واللمسة الجمالية</p>
+              <a href="#contact" class="btn btn-gold btn-lg">طلب استشارة مجانية</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="section-title">من نحن</h2>
+            <p class="about-text">
+              من قلب دمشق، ندرك أن المنزل ليس مجرد جدران، بل مساحة تنبض بالدفء والذكريات.
+              نحن في ARCHTEXS نعمل على تحويل الرؤية المعمارية لعملائنا إلى واقع متقن يجمع بين الجودة الهندسية واللمسة الجمالية، 
+              لنقدّم مساحات تنبض بالراحة والفخامة والاتقان.
+            </p>
+            <p class="about-text">
+              نلتزم بأعلى معايير التشطيب الداخلي ونالخبرة في تنفيذ المشاريع السكنية بمستوى احترافي يلبّي طموحات العميل.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="vision-box">
+              <h4>رؤيتنا</h4>
+              <p>
+                أن نكون الشركة الرائدة في مجال التشطيبات والديكور في المنطقة، من خلال تقديم حلول متكاملة تجمع بين الإبداع الهندسي، 
+                والدقة في التنفيذ، والجودة التي تدوم لسنوات طويلة.
+              </p>
+              <p>
+                نسعى لصناعة مساحات تعبّر عن شخصية عملائنا وتعكس جماليات العمارة الحديثة.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="vision-box">
+              <h4>قيمنا</h4>
+              <p>
+                <strong>الجودة:</strong> نلتزم بأعلى معايير الجودة في كل مشروع<br>
+                <strong>الاحترافية:</strong> فريقنا مدرب ومتخصص<br>
+                <strong>الابتكار:</strong> نتبنى أحدث التقنيات والتصاميم<br>
+                <strong>الالتزام:</strong> نلتزم بالمواعيد والميزانية المتفق عليها
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="services-section" id="projects">
+      <div class="container">
+        <h2 class="section-title text-center">أعمالنا</h2>
+        <div class="project-gallery">
+          <div class="project-card">
+            <img src="assets/img/img_11.jpg" alt="مشروع 1">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>مشروع سكني</h4>
+                <p>تصميم وتنفيذ احترافي</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/img_2.jpg" alt="مشروع 2">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>ديكور داخلي</h4>
+                <p>تصاميم حديثة وراقية</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/img_33.jpg" alt="مشروع 3">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>تشطيبات عالية</h4>
+                <p>جودة ودقة في التنفيذ</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/img_4.jpg" alt="مشروع 4">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>أعمال كهربائية</h4>
+                <p>تركيبات آمنة وحديثة</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/img_55.jpg" alt="مشروع 5">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>نجارة داخلية</h4>
+                <p>تصاميم مخصصة وفريدة</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/img_66.jpg" alt="مشروع 6">
+            <div class="project-overlay">
+              <div class="project-overlay-text">
+                <h4>تركيب بلاط</h4>
+                <p>احترافية في التنفيذ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2 class="section-title text-center">خدماتنا</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=أعمال البنية والتأسيس" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-bolt service-icon"></i>
+              <h5>أعمال البنية والتأسيس</h5>
+              <p>تأسيس الكهرباء والسباكة، العزل الحراري والمائي، وبناء الجدران الأساسية</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=التشطيبات الداخلية" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-paint-roller service-icon"></i>
+              <h5>التشطيبات الداخلية</h5>
+              <p>الدهانات، الجبس، الأرضيات، والأسقف المستعارة</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=النجارة والحدادة والمطابخ العصرية" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-hammer service-icon"></i>
+              <h5>النجارة والحدادة</h5>
+              <p>أبواب، خزائن مطابخ، درابزين، وحمايات نوافذ</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=أعمال الكهرباء الحديثة" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-plug service-icon"></i>
+              <h5>أعمال الكهرباء الحديثة</h5>
+              <p>سويتشات، إنارة مخفية، أنظمة منازل ذكية، وكاميرات مراقبة</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=أعمال السباكة " class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-faucet-drip service-icon"></i>
+              <h5>أعمال السباكة </h5>
+              <p>تركيب خلاطات ومغاسل، تجهيز حمامات، وسخانات طاقة</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=التشطيبات الخارجية" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-house-chimney service-icon"></i>
+              <h5>التشطيبات الخارجية</h5>
+              <p>دهان واجهات، حجر ورخام خارجي، مظلات، وأرضيات حدائق</p>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="service-detail.html?service=ترميم وصيانة المنازل" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-screwdriver-wrench service-icon"></i>
+              <h5>ترميم وصيانة المنازل</h5>
+              <p>معالجة تشققات ورطوبة، تجديد حمامات ومطابخ، وصيانة شاملة</p>
+            </a>
+          </div>
+<div class="col-lg-6">
+            <a href="service-detail.html?service=خدمة  VIP" class="service-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+              <i class="fas fa-star service-icon"></i>
+              <h5>خدمة VIP</h5>
+              <p style="text-align: right;">باقة متكاملة ومخصصة لعملائنا المميزين الذين يبحثون عن أعلى مستويات الجودة والاهتمام بالتفاصيل والسرعة في الإنجاز</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about-section" id="team">
+      <div class="container">
+        <h2 class="section-title text-center">فريق العمل</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member">
+              <i class="fas fa-user-tie" style="font-size: 3rem; color: var(--archtexs-gold);"></i>
+              <h5>المدير العام</h5>
+              <p>إدارة المشاريع والعلاقات مع العملاء</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member">
+              <i class="fas fa-pencil-ruler" style="font-size: 3rem; color: var(--archtexs-gold);"></i>
+              <h5>مهندس التصميم</h5>
+              <p>التصاميم والرؤى الهندسية الإبداعية</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member">
+              <i class="fas fa-tools" style="font-size: 3rem; color: var(--archtexs-gold);"></i>
+              <h5>فريق التنفيذ</h5>
+              <p>فنيون متخصصون في جميع التخصصات</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="services-section" id="contact">
+      <div class="container">
+        <h2 class="section-title text-center">تواصل معنا</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="contact-info">
+              <i class="fas fa-phone"></i>
+              <h5>الهاتف</h5>
+              <p><a dir="ltr" href="tel:+46720029120" style="color: var(--archtexs-dark); text-decoration: none;">+46 72 002 9120</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-info">
+              <i class="fas fa-envelope"></i>
+              <h5>البريد الإلكتروني</h5>
+              <p><a href="#" data-bs-toggle="modal" data-bs-target="#emailModal" style="color: var(--archtexs-dark); text-decoration: none;cursor: pointer;">تواصل معنا عبر الإيميل</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <h5>العنوان</h5>
+              <p>سوريا – دمشق</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12 text-center">
+            <h4 style="color: var(--archtexs-dark); margin-bottom: 2rem;">تابعنا على وسائل التواصل الاجتماعي</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/archtexs/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61582330993661" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.tiktok.com/@archtexs?lang=en" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+             <a href="https://x.com/archtexs46160" target="_blank" title="X">
+  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="fill: currentColor; width: 1em; vertical-align: -0.125em;">
+    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+  </svg>
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===============================================-->
+  <!--    Footer-->
+  <!-- ===============================================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h5 class="footer-title">عن ARCHTEXS</h5>
+          <p>شركة متخصصة في التشطيبات والديكور والأعمال الكهربائية والنجارة والمنازل الذكية</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">الخدمات</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#services">أعمال البنية والتأسيس</a></li>
+            <li><a href="#services">النجارة والحدادة</a></li>
+            <li><a href="#services">أعمال السباكة</a></li>
+            <li><a href="#services">ترميم وصيانة المنازل</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">الخدمات</h5>
+          <p>
+<ul style="list-style: none; padding: 0;">
+            <li><a href="#services">التشطيبات الداخلية</a></li>
+            <li><a href="#services">أعمال الكهرباء الحديثة</a></li>
+            <li><a href="#services">التشطيبات الخارجية</a></li>
+            <li><a href="#services">خدمة VIP</a></li>
+ </ul>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+      <div class="row text-center">
+        <div class="col-12">
+          <p style="margin: 0;">جميع الحقوق محفوظة © 2025 ARCHTEXS - من الفكرة حتى آخر لمسة</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===============================================-->
+  <!--    Scripts-->
+  <!-- ===============================================-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[n].classList.add('active');
+      dots[n].classList.add('active');
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Auto-rotate slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Hide preloader when page loads
+    window.addEventListener('load', function() {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailModalLabel">تواصل معنا</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <form action="send_email.php" method="POST">
+          
+          <div class="mb-3">
+            <label for="senderName" class="col-form-label">الاسم:</label>
+            <input type="text" class="form-control" id="senderName" name="name" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="senderEmail" class="col-form-label">بريدك الإلكتروني:</label>
+            <input type="email" class="form-control" id="senderEmail" name="email" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="messageText" class="col-form-label">الرسالة:</label>
+            <textarea class="form-control" id="messageText" name="message" rows="4" required></textarea>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            <button type="submit" class="btn btn-primary" style="background-color: var(--archtexs-dark); border: none;">إرسال الرسالة</button>
+          </div>
+
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

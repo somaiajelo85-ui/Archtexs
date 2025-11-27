@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Details - ARCHTEXS</title>
+  
+  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendors/hamburgers/hamburgers.min.css" rel="stylesheet">
+  <link href="vendors/loaders.css/loaders.min.css" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet" />
+  <link href="assets/css/user.min.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --archtexs-dark: #1E3A36;
+      --archtexs-gold: #C9A227;
+      --archtexs-light: #F4F6F5;
+      --archtexs-gray: #D9E3DF;
+      --archtexs-black: #0b1715;
+    }
+
+    * {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--archtexs-light);
+    }
+
+    .service-hero {
+      background: linear-gradient(135deg, var(--archtexs-dark) 0%, #2d5a55 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .service-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--archtexs-gold);
+      margin-bottom: 20px;
+    }
+
+    .service-hero p {
+      font-size: 1.3rem;
+      color: var(--archtexs-light);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    .service-content {
+      padding: 60px 0;
+    }
+
+    .service-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 40px;
+      white-space: pre-wrap;
+      text-align: left; /* LTR alignment */
+    }
+
+    .service-features {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      margin: 40px 0;
+      border-left: 5px solid var(--archtexs-gold); /* Changed to border-left for LTR */
+      border-right: none;
+      text-align: left; /* LTR alignment */
+    }
+
+    .service-features h3 {
+      color: var(--archtexs-dark);
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+
+    .feature-item i {
+      color: var(--archtexs-gold);
+      font-size: 1.5rem;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .feature-item p {
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--archtexs-gold);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      color: var(--archtexs-dark);
+    }
+
+    .back-button i {
+      margin-right: 8px; /* Changed margin-left to margin-right for LTR */
+    }
+
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      width: auto;
+    }
+
+    .nav-link {
+      color: var(--archtexs-dark) !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--archtexs-gold) !important;
+    }
+
+    footer {
+      background-color: var(--archtexs-dark);
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      text-align: left; /* LTR alignment */
+    }
+
+    footer a {
+      color: var(--archtexs-gold);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-gold {
+      background-color: var(--archtexs-gold);
+      color: var(--archtexs-dark);
+      border: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--archtexs-dark);
+      color: var(--archtexs-gold);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index-en.html" style="margin-right: 0;"> <!-- Changed margin-left to margin-right -->
+        <img src="assets/img/logo.png" alt="ARCHTEXS Logo"style="height: 100px; width: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-2">
+          <li class="nav-item"><a class="nav-link" href="index-en.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-en.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-en.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-en.html#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-en.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="color: var(--archtexs-gold); font-weight: 700;">AR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Service Hero -->
+  <div class="service-hero" id="serviceHero">
+    <div class="container">
+      <a href="index-en.html#services" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Services
+      </a>
+      <h1 id="serviceName">Service Name</h1>
+      <p id="serviceTagline">Short description of the service</p>
+    </div>
+  </div>
+
+  <!-- Service Content -->
+  <div class="container service-content">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <img id="serviceImage" src="assets/img/img_1.jpg" alt="Service Image" class="service-image">
+        
+        <div class="service-description" id="serviceDescription">
+          Detailed service description will appear here
+        </div>
+
+        <div class="service-features">
+          <h3>Service Features</h3>
+          <div id="serviceFeatures"></div>
+        </div>
+
+        <div class="service-features" style="border-left-color: var(--archtexs-dark); border-right: none;"> <!-- Changed to border-left for LTR -->
+          <h3>Execution Process</h3>
+          <div id="serviceProcess"></div>
+        </div>
+
+        <div style="background: var(--archtexs-gold); color: white; padding: 40px; border-radius: 10px; text-align: center; margin-top: 40px;">
+          <h3 style="margin-bottom: 20px;">Want to know more?</h3>
+          <p style="margin-bottom: 20px;">Contact us now for a free consultation</p>
+          <a href="index-en.html#contact" class="btn btn-light btn-lg">Request a Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h5 class="footer-title">About ARCHTEXS</h5>
+          <p>A specialized company in finishing, interior design, electrical works, carpentry, and smart homes</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">Services</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="service-detail-en.html?service=interior-design">Interior Design and Decor</a></li>
+            <li><a href="service-detail-en.html?service=plastering">Plastering Works</a></li>
+            <li><a href="service-detail-en.html?service=painting">Painting</a></li>
+            <li><a href="service-detail-en.html?service=electrical">Electrical Works</a></li>
+            <li><a href="service-detail-en.html?service=renovation">Home Renovation</a></li>
+            <li><a href="service-detail-en.html?service=tiling">Tiling Installation</a></li>
+            <li><a href="service-detail-en.html?service=vip">VIP Service</a></li>
+            <li><a href="service-detail-en.html?service=smart-homes">Smart Homes</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-title">Contact Us</h5>
+          <p>
+            <i class="fas fa-phone"></i> <a href="tel:+46720029120">+46 72 002 9120</a><br>
+            <i class="fas fa-envelope"></i> <a href="mailto:info@archtexs.com">info@archtexs.com</a><br>
+            <i class="fas fa-map-marker-alt"></i> Syria – Damascus
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+      <div class="row text-center">
+        <div class="col-12">
+          <p style="margin: 0;">All Rights Reserved © 2025 ARCHTEXS - From Concept to the Final Touch</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+  <script>
+    // Service data (English)
+    const services = {
+      'foundation': {
+        name: 'Foundation and Infrastructure Works',
+        tagline: 'A solid foundation for your project',
+        image: 'assets/img/img_1.jpg',
+        description: `We provide integrated services for infrastructure and foundation works to ensure the strength and durability of your project. Our services include electrical and plumbing setup, thermal and water insulation, and basic wall construction.`,
+        features: [
+          { icon: 'fas fa-bolt', text: 'Electrical setup and wiring' },
+          { icon: 'fas fa-faucet', text: 'Plumbing and sewage extension' },
+          { icon: 'fas fa-water', text: 'Thermal and water insulation' },
+          { icon: 'fas fa-cube', text: 'Internal wall construction (Block/Gypsum Board)' },
+          { icon: 'fas fa-door-open', text: 'Installation of basic windows and doors' }
+        ],
+        process: [
+          { icon: 'fas fa-drafting-compass', text: 'Infrastructure planning and design' },
+          { icon: 'fas fa-tools', text: 'Execution of foundation works' },
+          { icon: 'fas fa-check-double', text: 'Quality inspection and standard compliance' },
+          { icon: 'fas fa-building', text: 'Completion of the basic structure' }
+        ]
+      },
+      'interior-finishing': {
+        name: 'Interior Finishing',
+        tagline: 'An aesthetic touch and unparalleled luxury',
+        image: 'assets/img/img_2.jpg',
+        description: `We transform your interior space into an artistic masterpiece through our distinguished interior finishing services. We use the finest materials and modern techniques for paints, gypsum, flooring, and false ceilings.`,
+        features: [
+          { icon: 'fas fa-paint-roller', text: 'All types of painting' },
+          { icon: 'fas fa-archway', text: 'Gypsum and wall decorations' },
+          { icon: 'fas fa-scroll', text: 'Installation of wallpaper and decorations' },
+          { icon: 'fas fa-border-all', text: 'Flooring works (Tiles, Ceramic, Porcelain)' },
+          { icon: 'fas fa-tree', text: 'Parquet and Vinyl' },
+          { icon: 'fas fa-border-all', text: 'Installation of false ceilings' }
+        ],
+        process: [
+          { icon: 'fas fa-palette', text: 'Selection of designs and colors' },
+          { icon: 'fas fa-brush', text: 'Application of paints and gypsum' },
+          { icon: 'fas fa-trowel', text: 'Installation of flooring and ceilings' },
+          { icon: 'fas fa-star', text: 'Final finishing and handover' }
+        ]
+      },
+      'carpentry-blacksmithing': {
+        name: 'Carpentry and Blacksmithing',
+        tagline: 'Carpentry, metalwork, and luxury kitchen execution with precise standards and modern touches',
+        image: 'assets/img/img_3.jpg',
+        description: `We offer integrated solutions for carpentry and blacksmithing, from doors and cabinets to railings and window protection. We combine traditional craftsmanship with modern designs to produce unique and high-quality pieces.`,
+        features: [
+          { icon: 'fas fa-door-closed', text: 'Carpentry for interior and exterior doors' },
+          { icon: 'fas fa-kitchen-set', text: 'Kitchen cabinets and wardrobes' },
+          { icon: 'fas fa-stairs', text: 'Railings + window protection' },
+          { icon: 'fas fa-lock', text: 'Iron/Aluminum/Wood doors' }
+        ],
+        process: [
+          { icon: 'fas fa-ruler-combined', text: 'Measurement and design of pieces' },
+          { icon: 'fas fa-hammer', text: 'Manufacturing of carpentry and blacksmithing' },
+          { icon: 'fas fa-screwdriver', text: 'Installation and fixing of pieces' },
+          { icon: 'fas fa-handshake', text: 'Final handover' }
+        ]
+      },
+      'modern-electrical': {
+        name: 'Modern Electrical Works',
+        tagline: 'Smart and safe electrical systems',
+        image: 'assets/img/img_4.jpg',
+        description: `We specialize in installing modern electrical systems that ensure safety and efficiency. Our services include switches, hidden lighting, Smart Home systems, and surveillance cameras.`,
+        features: [
+          { icon: 'fas fa-plug', text: 'Switches and outlets' },
+          { icon: 'fas fa-lightbulb', text: 'Hidden and decorative lighting' },
+          { icon: 'fas fa-house-signal', text: 'Smart Home systems' },
+          { icon: 'fas fa-video', text: 'Installation of surveillance cameras and fire alarm' }
+        ],
+        process: [
+          { icon: 'fas fa-drafting-compass', text: 'Designing electrical circuits' },
+          { icon: 'fas fa-tools', text: 'Installing wires and switches' },
+          { icon: 'fas fa-check-double', text: 'Comprehensive system testing' },
+          { icon: 'fas fa-certificate', text: 'Issuing inspection certificate' }
+        ]
+      },
+      'final-plumbing': {
+        name: 'Plumbing Works',
+        tagline: 'High-quality sanitary installations',
+        image: 'assets/img/img_5.jpg',
+        description: `We guarantee high-quality and practical final plumbing installations. Our services include installing mixers and washbasins, fully equipping bathrooms, and installing electric and solar water heaters.`,
+        features: [
+          { icon: 'fas fa-faucet-drip', text: 'Installation of mixers and washbasins' },
+          { icon: 'fas fa-bath', text: 'Equipping bathrooms with accessories' },
+          { icon: 'fas fa-solar-panel', text: 'Electric and solar water heaters' }
+        ],
+        process: [
+          { icon: 'fas fa-ruler-combined', text: 'Accurate measurement and planning' },
+          { icon: 'fas fa-screwdriver', text: 'Initial Installation Phase (Concealed Plumbing)' },
+          { icon: 'fas fa-trowel', text: 'Final Installation Phase' },
+          { icon: 'fas fa-check-circle', text: 'Inspection and Handover Phase' }
+        ]
+      },
+      'exterior-finishing': {
+        name: 'Exterior Finishing',
+        tagline: 'Your home\'s facade reflects its luxury',
+        image: 'assets/img/img_6.jpg',
+        description: `We pay special attention to exterior facades that give the first impression of your home. We offer services for painting facades, installing stone and marble, canopies, and garden flooring.`,
+        features: [
+          { icon: 'fas fa-house-chimney', text: 'Painting of house facades' },
+          { icon: 'fas fa-gem', text: 'Exterior stone and marble' },
+          { icon: 'fas fa-umbrella', text: 'Installation of canopies and courtyards' },
+          { icon: 'fas fa-leaf', text: 'Garden tiles and flooring' }
+        ],
+        process: [
+          { icon: 'fas fa-magnifying-glass', text: 'Detailed home inspection' },
+          { icon: 'fas fa-clipboard-list', text: 'Preparing a comprehensive renovation plan' },
+          { icon: 'fas fa-wrench', text: 'Execution of all finishing phases, including natural and artificial stone installation, exterior painting, and exterior decoration' },
+          { icon: 'fas fa-handshake', text: 'Handing over the home ready for occupancy' }
+        ]
+      },
+      'renovation-maintenance': {
+        name: 'Home Renovation and Maintenance',
+        tagline: 'Bringing life back to your home',
+        image: 'assets/img/before_after_renovation.jpg',
+        description: `Specialized services for home renovation and maintenance, including treating cracks and moisture, renewing bathrooms and kitchens, and comprehensive maintenance for electricity, plumbing, ceilings, and walls.`,
+        features: [
+          { icon: 'fas fa-screwdriver', text: 'Treating cracks and moisture' },
+          { icon: 'fas fa-kitchen-set', text: 'Renewing bathrooms and kitchens' },
+          { icon: 'fas fa-screwdriver-wrench', text: 'Electrical and plumbing maintenance' },
+          { icon: 'fas fa-trowel', text: 'Renovation of ceilings and walls' }
+        ],
+        process: [
+          { icon: 'fas fa-comments', text: 'Comprehensive and detailed consultation' },
+          { icon: 'fas fa-pencil-ruler', text: 'Custom design according to your wishes' },
+          { icon: 'fas fa-eye', text: 'Daily monitoring of execution' },
+          { icon: 'fas fa-crown', text: 'Luxury handover with comprehensive warranties' }
+        ]
+      },
+'vip': {
+        name: 'VIP Service',
+        tagline: 'An exclusive experience for completing your project with the highest standards',
+        image: 'assets/img/img_10.jpg', 
+        description: `The VIP service is a comprehensive and customized package for our distinguished clients who seek the highest levels of quality, attention to detail, and speed of execution. This service includes full project management from start to finish, with a dedicated team at your disposal, and the selection of the finest materials and exclusive designs.`,
+        features: [
+            { icon: 'fas fa-star', text: 'Design and Virtual Reality Visualization' },
+            { icon: 'fas fa-handshake', text: 'Dedicated on-demand team' },
+            { icon: 'fas fa-gem', text: 'Selection of luxurious and exclusive materials and finishes' },
+            { icon: 'fas fa-clock', text: 'Accelerated timeline and speed of execution' },
+            { icon: 'fas fa-headset', text: '24/7 support and follow-up' }
+        ],
+        process: [
+            { icon: 'fas fa-user-tie', text: 'Private consultation meeting to define requirements' },
+            { icon: 'fas fa-palette', text: 'Exclusive and detailed 3D design' },
+            { icon: 'fas fa-tasks', text: 'Project execution with direct engineering supervision' },
+            { icon: 'fas fa-key', text: 'Turnkey project delivery' }
+        ]
+      }
+    };
+
+    // Get service from URL parameter
+    function getServiceFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('service') || 'interior-design';
+    }
+
+    // Load service details
+    function loadService() {
+      const serviceId = getServiceFromURL();
+      const service = services[serviceId];
+
+      if (service) {
+        document.getElementById('serviceName').textContent = service.name;
+        document.getElementById('serviceTagline').textContent = service.tagline;
+        document.getElementById('serviceImage').src = service.image;
+        document.getElementById('serviceDescription').textContent = service.description;
+
+        // Load features
+        const featuresContainer = document.getElementById('serviceFeatures');
+        featuresContainer.innerHTML = service.features.map(feature => `
+          <div class="feature-item">
+            <i class="${feature.icon}"></i>
+            <p>${feature.text}</p>
+          </div>
+        `).join('');
+
+        // Load process
+        const processContainer = document.getElementById('serviceProcess');
+        processContainer.innerHTML = service.process.map(step => `
+          <div class="feature-item">
+            <i class="${step.icon}"></i>
+            <p>${step.text}</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Load on page load
+    window.addEventListener('load', loadService);
+  </script>
+</body>
+
+</html>
