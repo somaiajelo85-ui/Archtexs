@@ -187,6 +187,11 @@ textarea:focus {
   .footer {
     display: none;
   }
+  /* هذا الكود سيجعل عناوين الفوتر ذهبية وسميكة في كل صفحات الموقع */
+footer h3, footer h4, .footer h3, .footer h4 {
+    color: var(--archtexs-gold) !important; /* اللون الذهبي */
+    font-weight: bold !important;       /* خط سميك */
+}
 
   body {
     color: var(--archtexs-dark);
