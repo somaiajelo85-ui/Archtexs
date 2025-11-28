@@ -10,16 +10,29 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+  
+  /* 1. تصغير العنوان الرئيسي بشكل إجباري */
+  h1, .hero-content h1, .display-1, .display-2, .display-3 {
+    font-size: 28px !important; /* تصغير الحجم ليناسب الشاشة */
+    line-height: 1.4; /* مسافة مريحة بين السطور */
+    word-wrap: break-word; /* كسر الكلمات الطويلة جداً */
   }
 
-  .hero-content p {
-    font-size: 1.1rem;
+  /* 2. تصغير النصوص الفرعية */
+  p, .hero-content p, .lead {
+    font-size: 16px !important;
+    line-height: 1.6;
   }
 
+  /* 3. تصغير عناوين الأقسام */
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem !important; /* تصغير قليل */
+  }
+
+  /* 4. حل مشكلة التصاق النص بالحواف */
+  .container, .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .service-card {
