@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاركنا بالأجابة على الاسئلة | نساء اليمن للمصالحة الوطنية</title>
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* تنسيقات نموذج المشاركة */
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(43, 108, 176, 0.25);
+            background-color: #ffffff;
+        }
+        .form-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        .btn-submit {
+            background-color: #6366f1; /* لون زر الإرسال مشابه لجوجل فورم */
+            color: white;
+            padding: 12px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        .btn-submit:hover {
+            background-color: #4f46e5;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+        }
+        .required-star {
+            color: #dc3545; /* لون أحمر للنجمة */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="شعار">
+            نساء اليمن للمصالحة الوطنية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"> الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link active" href="participate.html">شاركنا بالأجابة </a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="activities.html" data-bs-toggle="dropdown">الأنشطة </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="activities.html">الأنشطة الرئيسية</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">الأنشطة المحافظات</h6></li>
+                        <li><a class="dropdown-item" href="activities-taiz.html">محافظة تعز</a></li>
+                        <li><a class="dropdown-item" href="activities-aden.html">محافظة عدن</a></li>
+                        <li><a class="dropdown-item" href="activities-marib.html">محافظة مأرب</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="literature.html">أدبيات المبادرة</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">عن المبادرة</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">التواصل معنا </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Inner Hero Section -->
+<header class="inner-hero">
+    <div class="container">
+        <h1>شاركنا بالأجابة على الأسئلة</h1>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container py-5 mb-5">
+    <div class="row justify-content-center">
+        <!-- مقدمة نصية -->
+        <div class="col-lg-8 text-center mb-5">
+            <h2 class="section-title">رأيك يهمنا</h2>
+            <p class="lead text-muted mt-3">
+                يشكل رأيك جزءاً أساسياً من رؤيتنا للمستقبل. نرجو منك التفضل بالإجابة على الأسئلة أدناه للمساهمة في جهود المصالحة الوطنية وتوحيد الرؤى.
+            </p>
+        </div>
+        
+        <!-- نموذج الاستبيان -->
+        <div class="col-lg-8">
+            <div class="card shadow border-0 rounded-4 p-4 p-md-5">
+                <form id="participationForm" onsubmit="submitForm(event)">
+                    
+                    <p class="text-danger mb-4" style="font-size: 0.9rem;">* Indicates required question</p>
+
+                    <!-- الإيميل والاسم -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="email" class="form-label">Email <span class="required-star">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="fullName" class="form-label">الاسم الثلاثي <span class="required-star">*</span></label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Your answer" required>
+                        </div>
+                    </div>
+
+                    <!-- المحافظة والمهنة -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="governorate" class="form-label">المحافظة الحالية - مكان الاقامة <span class="required-star">*</span></label>
+                            <select class="form-select" id="governorate" required>
+                                <option value="" selected disabled>Choose</option>
+                                <option value="صنعاء">صنعاء</option>
+                                <option value="عدن">عدن</option>
+                                <option value="تعز">تعز</option>
+                                <option value="مأرب">مأرب</option>
+                                <option value="حضرموت">حضرموت</option>
+                                <option value="الحديدة">الحديدة</option>
+                                <option value="أبين">أبين</option>
+                                <option value="شبوة">شبوة</option>
+                                <option value="أخرى / خارج اليمن">أخرى / خارج اليمن</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="profession" class="form-label">المهنة <span class="required-star">*</span></label>
+                            <input type="text" class="form-control" id="profession" placeholder="Your answer" required>
+                        </div>
+                    </div>
+
+                    <!-- الانتماء -->
+                    <div class="mb-4">
+                        <label class="form-label d-block">الانتماء <span class="required-star">*</span></label>
+                        <div class="d-flex gap-4 mt-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="affiliation" id="independent" value="مستقل" required>
+                                <label class="form-check-label" for="independent">مستقل</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="affiliation" id="partisan" value="متحزب">
+                                <label class="form-check-label" for="partisan">متحزب</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الأسئلة المقالية -->
+                    <div class="mb-4">
+                        <label for="q1" class="form-label">كيف ستدعم المبادرة وتسهم في تحقيق أهدافها؟ <span class="required-star">*</span></label>
+                        <textarea class="form-control" id="q1" rows="2" placeholder="Your answer" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q2" class="form-label">كيف ستسهم في استعادة الدولة وتعزيز مؤسساتها ؟ <span class="required-star">*</span></label>
+                        <textarea class="form-control" id="q2" rows="2" placeholder="Your answer" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q3" class="form-label">كيف ستسهم في توحيد الصف الوطني وتسريع تحقيق أهداف المبادرة ؟ <span class="required-star">*</span></label>
+                        <textarea class="form-control" id="q3" rows="2" placeholder="Your answer" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="q4" class="form-label">كلمتك <span class="required-star">*</span></label>
+                        <textarea class="form-control" id="q4" rows="2" placeholder="Your answer" required></textarea>
+                    </div>
+
+                    <!-- الأزرار والملاحظات -->
+                    <div class="d-flex justify-content-between align-items-center mt-5">
+                        <button type="submit" class="btn btn-submit">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-link text-decoration-none" style="color: #6366f1;">
+                            Clear form
+                        </button>
+                    </div>
+
+                    <p class="text-muted mt-3 mb-0" style="font-size: 0.85rem;">
+                        A copy of your responses will be emailed to the address you provided.
+                    </p>
+
+                    <!-- رسالة النجاح المخفية (تظهر بعد الإرسال) -->
+                    <div id="successMessage" class="alert alert-success mt-4 text-center d-none" role="alert">
+                        <strong>شكراً لك!</strong> تم استلام مشاركتك بنجاح.
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>روابط سريعة</h5>
+                <ul>
+                    <li><a href="about.html">عن مبادرتنا (About Us)</a></li>
+                    <li><a href="activities.html">الأنشطة (Activities)</a></li>
+                    <li><a href="contact.html">تواصلوا معنا (Contact)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>عن المبادرة</h5>
+                <ul>
+                    <li><a href="about.html">رؤيتنا (Our Vision)</a></li>
+                    <li><a href="about.html">رسالتنا (Our Mission)</a></li>
+                    <li><a href="about.html">أهدافنا (Our Goals)</a></li>
+                    <li><a href="about.html">ما يميزنا (What Makes Us Unique)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>تابعنا</h5>
+                <div class="social-links mt-3">
+                    <a href="https://www.facebook.com/share/17qgiDX27n/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yemeniwomenreconciliation" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="mb-1">جميع الحقوق محفوظة © ٢٠٢٦ مبادرة نساء اليمن للمصالحة الوطنية</p>
+            <p class="mb-0" dir="ltr">All Rights Reserved © 2026 Women of Yemen for National Reconciliation Initiative</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- سكربت للتعامل مع زر الإرسال -->
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // يمنع تحديث الصفحة عند الضغط على إرسال
+        
+        // إظهار رسالة النجاح
+        document.getElementById('successMessage').classList.remove('d-none');
+        
+        // إفراغ الحقول بعد الإرسال
+        document.getElementById('participationForm').reset();
+
+        // إخفاء رسالة النجاح بعد 5 ثواني
+        setTimeout(() => {
+            document.getElementById('successMessage').classList.add('d-none');
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>

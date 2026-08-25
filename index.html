@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية | نساء اليمن للمصالحة الوطنية</title>
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ==================================================
+           1. إعدادات العلامة المائية للقسم الأزرق (الهيدر)
+        ================================================== */
+        .hero-section {
+            position: relative;
+            z-index: 1; 
+            overflow: hidden; 
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(43, 108, 176, 0.85)), url('https://lh3.googleusercontent.com/sitesv/AG8ngQUeDlX2NLdxx8uqN4p-Hjw4nGieCCTdp0YLOH-46AvWU63_LbMmCbnHB35CyUrs6ONctNhzChttDoVDGWnQagTk1TShtZYiz0Ysfv-Z8EuVhqm9R_AtkiLINA7RgwVqmcXPRCKDCFYaoQJCpuBhn-73eObJwucOybjRkSsfDRcBWNHI-huCbeZ-ZO67CXqjb356i2yLY2oB4a4wgVqUx1hpNpZxf67PjohsHnWJxLE=w1280') center/cover !important;
+        }
+        
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* استخدام الشعار الشفاف الجديد */
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 450px; 
+            height: 100%;
+            background-image: url('images/logo-transparent.png'); /* الشعار الشفاف */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.12; /* شفافية ممتازة للقسم الأزرق */
+            z-index: 1; 
+            pointer-events: none;
+            /* لم نعد بحاجة إلى mix-blend-mode المعقد لأن الصورة شفافة */
+        }
+
+        /* ==================================================
+           2. إعدادات العلامة المائية للقسم الأبيض (تحت الأهداف)
+        ================================================== */
+        main {
+            position: relative;
+        }
+        main > * {
+            position: relative;
+            z-index: 2;
+        }
+        main::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 650px;
+            height: 60%;
+            background-image: url('images/logo.png'); /* الشعار الشفاف */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.05; /* شفافية خفيفة للقسم الأبيض */
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .goal-card {
+            background-color: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0,0,0,0.05); /* إضافة حد خفيف يعطي بروزاً أجمل */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="شعار">
+            نساء اليمن للمصالحة الوطنية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html"> الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link " href="participate.html">شاركنا بالأجابة</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="activities.html" data-bs-toggle="dropdown">الأنشطة </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="activities.html">الأنشطة الرئيسية</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">الأنشطة المحافظات</h6></li>
+                        <li><a class="dropdown-item" href="activities-taiz.html">محافظة تعز</a></li>
+                        <li><a class="dropdown-item" href="activities-aden.html">محافظة عدن</a></li>
+                        <li><a class="dropdown-item" href="activities-marib.html">محافظة مأرب</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link " href="literature.html">أدبيات المبادرة</a></li>
+                <li class="nav-item"><a class="nav-link " href="about.html">عن المبادرة</a></li>
+                <li class="nav-item"><a class="nav-link " href="contact.html">التواصل معنا </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section">
+    <div class="container">
+        <h1>نساء اليمن للمصالحة الوطنية</h1>
+        <p>YEMENI WOMEN FOR NATIONAL RECONCILIATION</p>
+        <p class="fs-4 mt-3">التكتل اليمني للسلام</p>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    
+    <!-- General Goal -->
+    <section class="row align-items-center mb-5 pb-5 mt-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="section-title">الهدف العام </h2>
+            <p class="lead text-muted mt-3">
+                توحيد الطاقات النسوية والوطنية لدعم المصالحة الشاملة ، وحماية اللحمة المجتمعية، وترسيخ أسس الدولة الدستورية لضمان يمن مستقر ومزدهر
+            </p>
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </section>
+
+    <!-- Sub Goals -->
+    <section class="mb-5">
+        <h2 class="section-title text-center d-block mb-5"> الأهداف الفرعية</h2>
+        <div class="row g-4">
+            
+            <!-- Goal 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>1- تعزيز الحوار والمصالحة الوطنية</h5>
+                        <p class="card-text text-muted">دعم الخطاب الوطني الجامع وثقافة السلم والتعايش والشراكة الوطنية، ومساندة جهود الحوار بين مختلف الأطياف ، وترسيخ قيم التوافق الوطني.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>2- الدولة الدستورية وسيادة القانون</h5>
+                        <p class="card-text text-muted">تعزيز الألتزام بالدستور والثوابت الوطنية، وترسيخ مبدأ المواطنة المتساوية ،ودعم مؤسسات الدولة بما يكفل الأمن والاستقرار وحماية الحقوق والحريات.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>3- تعزيز العدالة والسلم الأجتماعي</h5>
+                        <p class="card-text text-muted">نشر قيم العدالة والمساواة بين المواطنين ومناهضة التمييز وخطابات الكراهية والتحريض، بما يعزز التماسك المجتمعي والسلم الأهلي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>4- السيادة الوطنية وعلاقات حسن الجوار</h5>
+                        <p class="card-text text-muted">تعزيز السيادة الوطنية وحماية المصالح العليا للبلاد ، ودعم علاقات متوازنة مع الدول المجاورة تقوم على الأحترام المتبادل والمصالح المشتركة، بما يحفظ وحدة اليمن واستقلاله.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>5- الإسهام في التنمية وإعادة البناء</h5>
+                        <p class="card-text text-muted">دعم الجهود الوطنية لمعالجة الأثار السلبية للنزاعات على الاقتصاد والتنمية والاستقرار وتشجيع المبادرات التى تسهم في إعادة البناء وتحقيق التنمية المستدامة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="goal-card">
+                    <div class="card-body">
+                        <h5>6- تعزيز حوار المغتربين اليمنيين</h5>
+                        <p class="card-text text-muted">تمكين المغتربين من الإسهام في التنمية والبناء الوطني ،وتوفير بيئة داعمة لاستثماراتهم وخبراتهم كشركاء في نهضة الوطن.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>روابط سريعة</h5>
+                <ul>
+                    <li><a href="about.html">عن مبادرتنا (About Us)</a></li>
+                    <li><a href="activities.html">الأنشطة (Activities)</a></li>
+                    <li><a href="contact.html">تواصلوا معنا (Contact)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>عن المبادرة</h5>
+                <ul>
+                    <li><a href="about.html">رؤيتنا (Our Vision)</a></li>
+                    <li><a href="about.html">رسالتنا (Our Mission)</a></li>
+                    <li><a href="about.html">أهدافنا (Our Goals)</a></li>
+                    <li><a href="about.html">ما يميزنا (What Makes Us Unique)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>تابعنا</h5>
+                <div class="social-links mt-3">
+                    <a href="https://www.facebook.com/share/17qgiDX27n/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yemeniwomenreconciliation" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="mb-1">جميع الحقوق محفوظة © ٢٠٢٦ مبادرة نساء اليمن للمصالحة الوطنية</p>
+            <p class="mb-0" dir="ltr">All Rights Reserved © 2026 Women of Yemen for National Reconciliation Initiative</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنشطة محافظة تعز | نساء اليمن للمصالحة الوطنية</title>
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .activity-details-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .activity-image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #f8fafc;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .activity-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-image:hover {
+            transform: scale(1.02);
+        }
+
+        .activity-title {
+            color: var(--primary-color);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .info-label {
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-left: 5px;
+        }
+        .info-text {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        .text-indent {
+            padding-right: 25px;
+        }
+        .section-divider {
+            border-top: 2px dashed #cbd5e1;
+            margin: 50px 0;
+        }
+
+        @media (max-width: 768px) {
+            .activity-details-card {
+                padding: 20px;
+            }
+            .activity-image {
+                max-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="شعار">
+            نساء اليمن للمصالحة الوطنية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"> الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="participate.html">شاركنا بالأجابة </a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="activities.html" data-bs-toggle="dropdown">الأنشطة</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="activities.html">الأنشطة الرئيسية</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">الأنشطة المحافظات</h6></li>
+                        <li><a class="dropdown-item active" href="activities-taiz.html">محافظة تعز</a></li>
+                        <li><a class="dropdown-item" href="activities-aden.html">محافظة عدن</a></li>
+                        <li><a class="dropdown-item" href="activities-marib.html">محافظة مأرب</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="literature.html">أدبيات المبادرة</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">عن المبادرة </a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">التواصل معنا </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Inner Hero Section -->
+<header class="inner-hero" style="padding-bottom: 120px;">
+    <div class="container">
+        <h1>أنشطة محافظة تعز</h1>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- بطاقة تفاصيل النشاط -->
+            <div class="activity-details-card">
+                
+                <!-- ================= النشاط الأول ================= -->
+                <h3 class="activity-title">لقاء مجموعة تعز لمبادرة نساء اليمن للمصالحة الوطنية</h3>
+                
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-md-6">
+                        <div class="activity-image-container">
+                            <img src="images/taiz 1.jpeg" alt="لقاء تعز 1" class="activity-image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="activity-image-container">
+                            <img src="images/taiz 2.jpeg" alt="لقاء تعز 2" class="activity-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 px-md-4">
+                    <p class="info-text">
+                        <span class="info-label">الموضوع:</span> 
+                        مبادرة نساء اليمن للمصالحة الوطنية – مجموعة تعز
+                    </p>
+                    
+                    <p class="info-text fw-bold text-primary mt-4 mb-2">معلومات اللقاء العامة</p>
+                    <p class="info-text text-indent">يأتي اللقاء من ضمن مجموعة لقاءات تشاورية في مختلف محافظات الجمهورية</p>
+                    
+                    <ul class="list-unstyled text-indent mt-3">
+                        <li class="info-text"><span class="info-label">الجهة المنظمة:</span> مبادرة نساء اليمن للمصالحة الوطنية</li>
+                        <li class="info-text"><span class="info-label">المكان:</span> محافظة تعز – منتزه التعاون</li>
+                        <li class="info-text"><span class="info-label">التاريخ:</span> 9 / يونيو/ 2026م</li>
+                        <li class="info-text"><span class="info-label">طبيعة اللقاء:</span> لقاء تشاوري موسع</li>
+                        <li class="info-text"><span class="info-label">المشاركون :</span> نخبة من القيادات النسائية الناشطات في المجتمع</li>
+                        <li class="info-text"><span class="info-label">معد التقرير:</span> أحلام البكري</li>
+                    </ul>
+
+                    <p class="info-text fw-bold text-primary mt-4 mb-2">أهداف اللقاء</p>
+                    <div class="text-indent">
+                        <p class="info-text">​تعزيز الوعي المجتمعي بقيم السلام والمصالحة الوطنية</p>
+                        <p class="info-text">​الانتقال من مرحلة الحوار النظري إلى مرحلة العمل الميداني الفاعل</p>
+                        <p class="info-text">​تعزيز دور المرأة كشريك أساسي في صناعة السلام وصياغة المبادرات المجتمعية</p>
+                    </div>
+
+                    <p class="info-text fw-bold text-primary mt-4 mb-2">​ 📌أبرز محاور وأعمال اللقاء </p>
+                    
+                    <div class="text-indent">
+                        <p class="info-text fw-bold mb-1">♦️أولا: الجلسة الافتتاحية والتعارف</p>
+                        <p class="info-text ps-3">​بدأت الجلسة بالتعارف بين المشاركات واستعراض الرؤية الوطنية للمبادرة</p>
+                        <p class="info-text ps-3">​ركزت المداخلات على أهمية بناء السلام وترسيخ مبادئ العدالة الانتقالية لتحقيق التنمية المستدامة والأمن</p>
+                        <p class="info-text ps-3">​التأكيد على دور المرأة المحوري في نشر ثقافة الحوار والتسامح وتجاوز آثار الصراع وبناء الثقة</p>
+                        
+                        <p class="info-text fw-bold mb-1 mt-3">♦️ثانياً: كلمة الأستاذ / جمال الحضرمي (الأمين العام لللتكتل اليمني للسلام)</p>
+                        <p class="info-text ps-3">​أكد أن السلام ضرورة وطنية ومسؤولية جماعية عاجلة لا تحتمل التأجيل</p>
+                        <p class="info-text ps-3">​أشار إلى أن المبادرة نتاج مشاورات واسعة مع نساء فاعلات من مختلف المحافظات</p>
+                        <p class="info-text ps-3">​دعا إلى توسيع مساحات التفاهم والعمل المشترك بين القوى الوطنية والمجتمعية</p>
+
+                        <p class="info-text fw-bold mb-1 mt-3">♦️ثالثاً: كلمة الدكتور / محمد العزاني</p>
+                        <p class="info-text ps-3">​شدد على أهمية رفع الوعي المجتمعي الداعم للسلام</p>
+                        <p class="info-text ps-3">​أوضح أن المصالحة الوطنية مشروع عملي يتطلب ترسيخ قيم المواطنة، الشراكة، القبول بالآخر، ونبذ خطاب الكراهية والإقصاء</p>
+
+                        <p class="info-text fw-bold mb-1 mt-3">♦️رابعاً: النقاشات المستفيضة وآليات العمل</p>
+                        <p class="info-text ps-3">​بحثت المشاركات سبل توسيع نطاق المبادرة ليشمل مختلف المحافظات</p>
+                        <p class="info-text ps-3">​التأكيد على أهمية التنسيق وبناء شراكات فاعلة بين القوى السياسية النسوية والمجتمعية لتحويل الأهداف إلى برامج ملموسة</p>
+
+                        <p class="info-text fw-bold mb-1 mt-3">♦️المخرجات والقرارات المتفق عليها</p>
+                        <p class="info-text ps-3">استكمال الهيكل التنظيمي: البدء الفوري في استكمال بناء الهيكل التنظيمي للمبادرة</p>
+                        <p class="info-text ps-3">​تشكيل فرق العمل: تشكيل فرق ولجان متخصصة لإعداد خطط العمل وآليات التنفيذ</p>
+                        <p class="info-text ps-3">​تعزيز التنسيق: فتح قنوات اتصال وتنسيق دائم مع كافة المكونات الوطنية والمجتمعية لتوحيد الجهود</p>
+
+                        <p class="info-text fw-bold text-danger mb-1 mt-3">🔴واخيرا الختام </p>
+                        <p class="info-text ps-3">​اختتم اللقاء بالتأكيد الجماعي على ان المرحلة الراهنة تتطلب خطاباً جامعاً يبني ولا يهدم، وأن مصلحة الوطن ومستقبل الأجيال تفرض الانتقال من دائرة الأمنيات إلى ميدان العمل الممارس، ومن الحديث عن السلام إلى صناعته الفعلية للوصول إلى يمن آمن ومستقر يسوده التعايش والشراكة</p>
+                    </div>
+                </div>
+
+                <!-- فاصل بين النشاطين -->
+                <div class="section-divider"></div>
+
+                <!-- ================= النشاط الثاني ================= -->
+                <h3 class="activity-title">تقرير الاجتماع التأسيسي لمبادرة المصالحة الوطنية- تعز </h3>
+                
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-md-4">
+                        <div class="activity-image-container">
+                            <img src="images/taiz 3.jpeg" alt="لقاء تعز 3" class="activity-image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="activity-image-container">
+                            <img src="images/taiz 4.jpeg" alt="لقاء تعز 4" class="activity-image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="activity-image-container">
+                            <img src="images/taiz 5.jpeg" alt="لقاء تعز 5" class="activity-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 px-md-4">
+                    <p class="info-text text-indent">
+                        عقد صباح يوم السبت 11 يوليو 2026 في قاعة بلقيس -متنزه التعاون اجتماع تأسيسي لمبادرة المصالحة الوطنية ضم كلا من الدكتور محمد العزاني والاستاذ جميل حسن بشر مدير عام التنسيق والمتابعة بديوان عام محافظة تعز وعدد عشرين من نساء تعز القياديات
+                    </p>
+
+                    <p class="info-text fw-bold text-primary mt-4 mb-2">جدول أعمال الاجتماع :</p>
+                    <div class="text-indent">
+                        <p class="info-text">- التعريف بمبادرة المصالحة الوطنية</p>
+                        <p class="info-text">- استعراض آلية الترشيح والتصويت</p>
+                        <p class="info-text">- تشكيل اللجنة التحضيرية.</p>
+                        <p class="info-text">- اقتراح تسمية دوائر الهيئة التنفيذية</p>
+                        <p class="info-text">- مناقشة ما يستجد</p>
+                    </div>
+
+                    <div class="text-indent mt-4">
+                        <p class="info-text">قدم د./ محمد العزاني عرضاً موجزاً عن عمل التكتل اليمني للسلام ومبادرة المصالحة الوطنية واستعرض أبرز الخطوات التي انجزت</p>
+                        <p class="info-text">كما استعرض آليات التوافق العام قدر المتاح وآليات الترشح والترشيح لشغل مواقع العمل التنفيذي في دوائر الهيئة التنفيذية من ناحية أخرى تم التركيز على ضرورة بناء الثقة، والسلام الداخلي كمطلب وطني عام وضرورة حتميه</p>
+                        <p class="info-text">بعدها تحدث الاستاذ جميل حسن بشر مدير عام التنسيق والمتابعه بديوان عام المحافظة عن أهمية مبادرة المصالحة الوطنية وضرورة تكاتف الجميع لانجاحها</p>
+                    </div>
+
+                    <p class="info-text fw-bold text-primary mt-4 mb-2">ونتج عن الاجتماع الاجرائي النتائج التالية :</p>
+                    <div class="text-indent">
+                        <p class="info-text">1- تشكيل اللجنة التحضيرية والمكونة من عدد 20 عضوة وهن الحاضرات في اجتماع اليوم.</p>
+                        <p class="info-text">تشكيل اللجان (( الدوائر )) كالتالي:</p>
+                        <ul class="info-text">
+                            <li>دائرة الوساطة</li>
+                            <li>دائرة العدالة الانتقالية</li>
+                            <li>دائرة الإعلام والعلاقات العامة.</li>
+                            <li>الدائرة المالية.</li>
+                            <li>دائرة التدريب والتأهيل.</li>
+                            <li>دائرة الرقابة والتفتيش</li>
+                            <li>الدائرة الجماهيرية</li>
+                        </ul>
+                        
+                        <p class="info-text mt-3">وتم توزيع العضوات المتواجدات لاقتراح اهداف ومهام الدوائر ضمن الهيكل المقترح ، حيث قمن باقتراح تعريف بمسمى كل لجنة واهدافها ومهامها</p>
+                        <p class="info-text">الاتفاق على أن يفتح باب الترشح أمام عضوات المبادرة للتقدم لمنصب منسقة المبادرة في تعز ورئاسة الدوائر</p>
+                        <p class="info-text">وعلى كل من تريد ترشيح نفسها في الموعد الذي سيحدد لاحقا لعقد المؤتمر التأسيسي</p>
+                        <p class="info-text">وعلى من ترى قدرتها على إدارة اي دائرة من الدوائر أو أحد الوظائف القيادية الثلاث في رئاسة المبادرة بالمحافظة اولا تحديد المهمه أو الدائرة التي ترغب الترشح فيها ثم ارسال مايلي:</p>
+                        
+                        <ul class="info-text">
+                            <li>السيرة الذاتية</li>
+                            <li>الأنشطة التي نفذتها بما يتوافق مع الدائرة المترشح لها بما يضمن إدارة المهام وفق التخصصات والخبرة الميدانية أو العملية</li>
+                            <li>برنامج عمل لمبادرة المصالحة الوطنية حتى نهاية عام 2026</li>
+                        </ul>
+                        <p class="info-text text-danger fw-bold">في مده اقصاها ثلاثة أيام من تاريخه</p>
+                        
+                        <p class="info-text mt-3">في نهاية الاجتماع تقرر عقد اجتماع قادم لمتابعة أعمال اللجنة التحضيرية يوم السبت او الاحد 18/19 يوليو 2026. حسب ما يتم الاتفاق عليه</p>
+                        <p class="info-text fw-bold mt-4">مقررة الاجتماع: <br> أروى الشميري</p>
+                    </div>
+
+                </div>
+                
+                <!-- زر العودة -->
+                <div class="text-center mt-5 pt-4 border-top">
+                    <a href="activities.html" class="btn btn-outline-secondary px-4 py-2" style="border-radius: 8px;">
+                        <i class="fas fa-arrow-right ms-2"></i> العودة لصفحة الأنشطة
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>روابط سريعة</h5>
+                <ul>
+                    <li><a href="about.html">عن مبادرتنا (About Us)</a></li>
+                    <li><a href="activities.html">الأنشطة (Activities)</a></li>
+                    <li><a href="contact.html">تواصلوا معنا (Contact)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>عن المبادرة</h5>
+                <ul>
+                    <li><a href="about.html">رؤيتنا (Our Vision)</a></li>
+                    <li><a href="about.html">رسالتنا (Our Mission)</a></li>
+                    <li><a href="about.html">أهدافنا (Our Goals)</a></li>
+                    <li><a href="about.html">ما يميزنا (What Makes Us Unique)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>تابعنا</h5>
+                <div class="social-links mt-3">
+                    <a href="https://www.facebook.com/share/17qgiDX27n/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yemeniwomenreconciliation" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="mb-1">جميع الحقوق محفوظة © ٢٠٢٦ مبادرة نساء اليمن للمصالحة الوطنية</p>
+            <p class="mb-0" dir="ltr">All Rights Reserved © 2026 Women of Yemen for National Reconciliation Initiative</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

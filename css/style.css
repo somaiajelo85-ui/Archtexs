@@ -1,0 +1,181 @@
+
+:root {
+    --primary-color: #1a365d; /* أزرق داكن أنيق */
+    --secondary-color: #2b6cb0; /* أزرق فاتح */
+    --bg-color: #f7fafc;
+    --text-dark: #2d3748;
+    --text-light: #718096;
+}
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+}
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-brand img {
+    width: 40px;
+    border-radius: 50%;
+}
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.dropdown-item:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(43, 108, 176, 0.85)), url('https://lh3.googleusercontent.com/sitesv/AG8ngQUeDlX2NLdxx8uqN4p-Hjw4nGieCCTdp0YLOH-46AvWU63_LbMmCbnHB35CyUrs6ONctNhzChttDoVDGWnQagTk1TShtZYiz0Ysfv-Z8EuVhqm9R_AtkiLINA7RgwVqmcXPRCKDCFYaoQJCpuBhn-73eObJwucOybjRkSsfDRcBWNHI-huCbeZ-ZO67CXqjb356i2yLY2oB4a4wgVqUx1hpNpZxf67PjohsHnWJxLE=w1280') center/cover;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 50px;
+}
+.hero-section h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero-section p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+/* Goal Section */
+.section-title {
+    color: var(--primary-color);
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    bottom: -10px;
+    right: 0;
+    border-radius: 2px;
+}
+.general-goal-img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+}
+/* Sub Goals Cards */
+.goal-card {
+    background: #ffffff;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+.goal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.goal-card img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+.goal-card .card-body {
+    padding: 30px;
+}
+.goal-card h5 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Footer */
+footer {
+    background-color: #1a202c;
+    color: #ffffff;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+footer h5 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 10px;
+}
+footer ul li a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer ul li a:hover {
+    color: #ffffff;
+}
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+.social-links a:hover {
+    background: var(--secondary-color);
+}
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+/* Page specific inner hero */
+.inner-hero {
+    background: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 50px;
+}
+.inner-hero h1 { font-weight: 800; }
